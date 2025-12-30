@@ -1,0 +1,143 @@
+.photo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in;
+  padding: 2rem;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 1001;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 3rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 1001;
+}
+
+.modal-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modal-nav-prev {
+  left: -80px;
+}
+
+.modal-nav-next {
+  right: -80px;
+}
+
+.modal-image-wrapper {
+  max-width: 100%;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+}
+
+.modal-info {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.modal-date {
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .photo-modal {
+    padding: 1rem;
+  }
+
+  .modal-close {
+    top: -2.5rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+
+  .modal-nav {
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
+  }
+
+  .modal-nav-prev {
+    left: 0.5rem;
+  }
+
+  .modal-nav-next {
+    right: 0.5rem;
+  }
+
+  .modal-image-wrapper {
+    max-height: 70vh;
+  }
+
+  .modal-image {
+    max-height: 70vh;
+  }
+}
+
